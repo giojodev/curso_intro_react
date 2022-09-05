@@ -1,0 +1,45 @@
+.TodoItemli{
+
+    text-decoration: none;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    
+}
+.TodoItem-p{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, Courier, monospace;
+}
+.TodoItem-p--complete {
+  text-decoration: line-through;
+}
+.TodoItemDiv{
+    /* margin: auto; */
+    margin-top: 15px;
+    margin-left: 40em;
+    padding: 2px;
+    background-color: #031a56;
+    margin-right: 40em;
+    color: white;
+    font-weight: bold;
+    text-transform: capitalize;
+    box-shadow: -1px 6px 16px 3px rgba(2,10,38,0.75);
+    -webkit-box-shadow: -1px 6px 16px 3px rgba(2,10,38,0.75);
+    -moz-box-shadow: -1px 6px 16px 3px rgba(2,10,38,0.75);
+    border-radius: 20px 20px 20px 20px;
+    -webkit-border-radius: 20px 20px 20px 20px;
+    -moz-border-radius: 20px 20px 20px 20px;
+}
+.TodoItemChk{
+    width: 20px;
+    height: 20px;
+    margin-right: 15px;
+    
+}
+.TodoRemove{
+float: right;
+margin-left: auto;
+}
+.TodoRemove:hover{
+    color: salmon;
+    cursor: pointer;
+}
