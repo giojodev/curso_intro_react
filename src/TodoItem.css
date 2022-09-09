@@ -29,10 +29,6 @@
     -webkit-border-radius: 20px 20px 20px 20px;
     -moz-border-radius: 20px 20px 20px 20 px;
 }
-.TodoItemChk{
-    visibility: hidden;
-    
-}
 .TodoItemChkVisible{
     visibility: visible;
     color: green;
