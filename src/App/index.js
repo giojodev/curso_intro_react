@@ -1,11 +1,7 @@
 //import logo from './logo.svg';
 //import './App.css';
 import React from 'react';
-import {TodoCounter} from './TodoCounter'
-import {TodoSearch} from './TodoSearch'
-import {TodoList} from './TodoList';
-import {CreateTodoButton} from './CreateTodoButton'
-import {TodoItem} from './TodoItem'
+import { AppUI } from './AppUI';
 
 const defaultTodos=[
   { text: 'Cortar cebolla', completed: true },
@@ -57,34 +53,15 @@ function App() {
 
 
   return (
-    <React.Fragment>
-    <TodoCounter
+    <AppUI
     total={totalTodos}
     completed={completedTodos}
+    searchValue={searchValue}
+    setSearchValue={setSearchValue}
+    searcherTodos={searcherTodos}
+    completeTodo={completeTodo}
+    deleteTodo={deleteTodo}
     />
-    
-    <TodoSearch
-      searchValue={searchValue}
-      setSearchValue={setSearchValue}
-    />
-    
-    <TodoList>
-      
-      {searcherTodos.map(todos=>(
-         <TodoItem 
-         key={todos.text} 
-         text={todos.text} 
-         completed={todos.completed}
-         onComplete={()=>{completeTodo(todos.text)
-         }}
-         onDelete={()=>{deleteTodo(todos.text)
-         }}
-         />
-      ))}
-    </TodoList>
-    <CreateTodoButton/>
-    
-    </React.Fragment>
   );
 }
 
