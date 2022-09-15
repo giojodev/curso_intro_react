@@ -38,7 +38,7 @@ const [error, setError]= React.useState(false);
 
       }
     }, 1000);
-  });
+  },[]);
   
 
   
