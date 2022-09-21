@@ -62,7 +62,7 @@ function TodoProvider(props){
             loading,
             error,
             totalTodos,
-            
+            completedTodos,
             searchValue,
             setSearchValue,
             searcherTodos,
