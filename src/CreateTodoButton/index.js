@@ -3,14 +3,14 @@ import './CreateTodoButton.css'
 function CreateTodoButton(props){
 
  const onClickButton = (msg) =>{
-    alert(msg);
+    props.setOpenModal(true);
  }
 
     return(
         <section>
             <button 
             className="CreateTodoButton"
-            onClick={()=>onClickButton("ESTO ES UNA PRUENA DE ALERTA")}
+            onClick={onClickButton}
             >+</button>
         </section>
     );
