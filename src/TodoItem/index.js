@@ -1,5 +1,7 @@
 import React from 'react'
 import './TodoItem.css'
+import { AiFillCloseCircle,AiFillCheckCircle } from 'react-icons/ai';
+
 
 function TodoItem(props){
 
@@ -19,12 +21,12 @@ function TodoItem(props){
             <span 
             className={`TodoItemChk ${props.completed && 'TodoItemChkVisible'}` }
             onClick={props.onComplete}
-            >√</span>
+            ><AiFillCheckCircle/></span>
             <p className={`TodoItem-p ${props.completed && 'TodoItem-p--complete'}`}>{props.text}</p>
             <span 
             className='TodoRemove' 
             onClick={props.onDelete}
-            >X</span>
+            ><AiFillCloseCircle /></span>
             </li>  
             </ul>
             
