@@ -1,5 +1,4 @@
 import React from 'react'
-import { TodoContext } from '../ToDoContext';
 import './TodoCounter.css'
 
 // const estilos = {
@@ -7,9 +6,9 @@ import './TodoCounter.css'
 //     backgroundColor:'yellow',
 // };
 
-function TodoCounter(){
+function TodoCounter({totalTodos,completedTodos}){
 
-    const {totalTodos,completedTodos}= React.useContext(TodoContext);
+
     return (
     <section>
         <h1 className='TodoCounterh1'> ✅ To Do List, by Gio ✅ </h1>
