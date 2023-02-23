@@ -1,10 +1,10 @@
 import React from 'react'
 import { useLocalStorage } from './useLocalStorage';
 
-const TodoContext = React.createContext();
+// const TodoContext = React.createContext();
 
 
-function TodoProvider(props){
+function useTodos(){
     const  {
         item : todos,
         saveItem : saveTodos,
@@ -66,8 +66,7 @@ function TodoProvider(props){
         //Para pasar la informacion se utiliza la propiedad value en la cual sera indicada cada dato que sera recibido.
         //Todas las propiedades que se desee compartir en el contexto deben ser definidas dentro de esta propiedad
         //Para pasar varias propiedades o datos se define como un tipo objeto (JSON) para pasar varios datos.
-        <TodoContext.Provider 
-        value={{
+        {
             loading,
             error,
             totalTodos,
@@ -80,11 +79,9 @@ function TodoProvider(props){
             deleteTodo,
             openModal,
             setOpenModal
-        }}>
-            {props.children}
-        </TodoContext.Provider>
+        }
     );
 
 }
 
-export {TodoContext,TodoProvider};
+export {useTodos};
